@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "GrabThatArtwork",
+    "description": "A simple extension used to get the source image of a soundcloud tune",
+    "version": "0.0.1",
+    "author": "Luke Secomb",
+    "browser_action": {
+        "default_icon": "tab-icon.png",
+        "default_title": "default title here",
+        "default_popup": "hello.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.soundcloud.com/*"],
+            "js": ["script.js"]
+        }
+    ],
+    "permissions": ["activeTab", "storage", "background"]
+}

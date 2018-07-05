@@ -16,7 +16,8 @@
     "content_scripts": [
         {
             "matches": ["https://*.soundcloud.com/*"],
-            "js": ["script.js"]
+            "js": ["script.js"],
+            "css": ["gta.css"]
         }
     ],
     "permissions": ["activeTab", "storage", "background"]
